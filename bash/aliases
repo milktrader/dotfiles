@@ -1,0 +1,42 @@
+# git
+
+function gg(){
+	git commit -v -a -m "$*"
+}
+
+alias clone='git clone git://github.com/'
+alias gst="git status"
+alias ga="git add ."
+alias gpu="git push"
+alias gpl="git pull"
+alias gb="git branch"
+alias gd="git diff | mate"
+
+# change directory
+
+alias ..="cd .."
+
+alias box="cd Dropbox"
+alias down="cd Download"
+alias desk="cd Desktop"
+
+# misc
+alias vi="vim"
+alias c="clear"
+alias la="ls -a"
+alias hal="ls -hal"
+alias sr="screen -r"
+
+# rails & ruby & mysql
+
+alias mysql=/usr/local/mysql/bin/mysql
+alias rb=" irb -f --simple-prompt"
+
+# processes
+
+alias tu="top -s 5"  # cpu
+alias tm="top -o vsize"  # memory
+
+# vim redirect
+
+alias g="mvim --remote-silent"

@@ -1,0 +1,58 @@
+# PATH variable on May 19, 2011
+# ✈  echo $PATH
+# /Users/wlasiuk/.rvm/gems/ruby-1.9.2-p0@myZoo/bin:/Users/wlasiuk/.rvm/gems/ruby-1.9.2-p0@global/bin:
+# /Users/wlasiuk/.rvm/rubies/ruby-1.9.2-p0/bin:/Users/wlasiuk/.rvm/bin:
+# /Users/wlasiuk/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:
+# /usr/texbin:/usr/X11/bin
+
+
+
+source ~/bin/dotfiles/git/git-completion.bash
+
+export PATH=~/bin:$PATH:/opt/local/bin
+
+export PATH="$HOME/Library/Haskell/bin:$PATH"
+export VIM_HOME="/usr/local/bin"
+export PATH="$VIM_HOME:$PATH"
+export EDITOR="vi"
+
+
+# export R_HOME='/Library/Frameworks/R.Framework/Resources'
+# export R_HOME='/usr/bin/R'
+# export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
+
+# from http://kpumuk.info/mac-os-x/customizing-iterm-creating-a-display-profile-with-pastel-colors/
+#export LANG=ru_RU.UTF-8
+export LANG=en_US.UTF-8
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
+
+PERL_CPANM_OPT="--local-lib=~/perl5"
+
+# # RSRuby
+# 
+# #export tLD_LIBRARY_PATH=$LD_LIBRARY_PATH:RHOME/bin
+# 
+#export R_HOME="/Library/Frameworks/R.Framework/Resources"
+#export LD_LIBRARY_PATH=$R_HOME/lib
+# 
+# export R_HOME="/Library/Frameworks/R.Framework/Resources"
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:R_HOME/lib:/opt/local/lib
+# some LIBRARY_PATH LD_LIBRARY_PATH variables
+
+export INCLUDE_PATH=/opt/local/include
+export C_INCLUDE_PATH=/opt/local/include
+export LIBRARY_PATH=/opt/local/lib
+export LD_LIBRARY_PATH=/opt/local/lib
+
+
+#rvm autocomplete
+
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion
+
+# THIS MUST BE THE LAST LINE ######################################
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+

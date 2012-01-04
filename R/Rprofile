@@ -1,0 +1,7 @@
+
+# source("~/bin/dotfiles/R/aliases")
+source("~/bin/dotfiles/R/source")
+source("~/bin/dotfiles/R/require")
+# source("~/bin/dotfiles/R/config")
+# source("~/bin/dotfiles/R/env")
+# source("~/bin/dotfiles/R/function")

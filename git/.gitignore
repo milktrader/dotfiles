@@ -1,0 +1,21 @@
+
+## RAILS
+
+.bundle
+db/*.sqlite3*
+log/*.log
+*.log
+/tmp/
+doc/
+*.swp
+*~
+.project
+
+## Mac OSX binaries
+
+.DS_Store
+
+## C/C++
+
+*.o
+*.out

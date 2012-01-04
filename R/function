@@ -1,0 +1,7 @@
+.First <- function(){
+cat("Welcome Data Mining Trader \n")
+}
+
+.Last <- function(){
+cat("Good luck trading \n")
+}
