@@ -16,8 +16,10 @@ export VIM_HOME="/usr/local/bin"
 export PATH="$VIM_HOME:$PATH"
 export EDITOR="vi"
 
+### MONGO URL ###################################
+export MONGOHQ_URL="mongodb://:@localhost:27017/forex"
 
-# export R_HOME='/Library/Frameworks/R.Framework/Resources'
+export R_HOME='/Library/Frameworks/R.Framework/Resources'
 # export R_HOME='/usr/bin/R'
 # export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
 

@@ -4,6 +4,7 @@ function gg(){
 	git commit -v -a -m "$*"
 }
 
+alias ggg='git push && git push heroku master'
 alias clone='git clone git://github.com/'
 alias gst="git status"
 alias ga="git add ."
