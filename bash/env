@@ -8,13 +8,32 @@
 
 
 source ~/bin/dotfiles/git/git-completion.bash
-
+export PATH=/usr/local/share/python:$PATH
+export PATH=$PATH:/usr/local/bin
 export PATH=~/bin:$PATH:/opt/local/bin
 
+#export PYTHONPATH=/Library/Python/2.5/site-packages:$PYTHONPATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export VIM_HOME="/usr/local/bin"
 export PATH="$VIM_HOME:$PATH"
 export EDITOR="vi"
+
+### virtualenv stuff ############################
+#source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+if [ $USER == myuser ]; then
+   export WORKON_HOME=$HOME/.virtualenvs
+   source /usr/local/bin/virtualenvwrapper.sh
+fi
+
+#export VIRTUALENVWRAPPER_PYTHON=/Library/Frameworks/Python.framework/Versions/2.7/bin/python
+#export VIRTUALENVWRAPPER_TMPDIR=$HOME/.virtualenvs/tmp
+
+#export VIRTUALENVWRAPPER_LOG_DIR
+#VIRTUALENVWRAPPER_LOG_DIR=/tmp
+
 
 ### MONGO URL ###################################
 export MONGOHQ_URL="mongodb://:@localhost:27017/forex"

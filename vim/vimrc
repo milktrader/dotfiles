@@ -75,7 +75,7 @@ let mapleader = ","
 " map <leader>tl :tablast<cr>
 " map <leader>tm :tabmove
 " map <leader>test  :!bash script/test
-map <leader>xl <c-x>  <c-l> 
+" map <leader>xl <c-x>  <c-l> 
 
 " map make stuff
 
