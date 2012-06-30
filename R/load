@@ -1,8 +1,0 @@
-
-# require(quantmod)
-
-
-
-source("~/r/pack/UNIX")  # system() commands
-source("~/r/food/future.r")  # the end all data mining function 
-

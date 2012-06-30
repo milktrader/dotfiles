@@ -1,6 +1,0 @@
-require(quantstrat)
-require(PerformanceAnalytics)
-require(myfun)
-
-# require(Rcpp)
-
