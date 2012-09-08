@@ -81,7 +81,7 @@ On_IWhite='\e[0;107m'   # White
 
 
 # # Git tab completion
-source ~/bin/dotfiles/git/git-completion.bash
+source ~/git/dotfiles/git/git-completion.bash
 
 # Show branch in status line
 

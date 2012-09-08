@@ -1,5 +1,5 @@
+.First <- function() {
 
-source("~/bin/dotfiles/R/library")
-# source("~/bin/dotfiles/R/config")
-# source("~/bin/dotfiles/R/env")
-# source("~/bin/dotfiles/R/function")
+  library(milk)
+  system('clear')
+}

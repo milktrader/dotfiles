@@ -1,3 +1,7 @@
+# python
+
+alias pit='ipython'
+
 # git
 
 function gg(){

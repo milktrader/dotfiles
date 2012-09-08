@@ -4,17 +4,25 @@
 # /Users/wlasiuk/.rvm/rubies/ruby-1.9.2-p0/bin:/Users/wlasiuk/.rvm/bin:
 # /Users/wlasiuk/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:
 # /usr/texbin:/usr/X11/bin
+export CPPFLAGS=-I/opt/X11/include
 
 
-
-source ~/bin/dotfiles/git/git-completion.bash
+source ~/git/dotfiles/git/git-completion.bash
 export PATH=/usr/local/share/python:$PATH
-export PATH=$PATH:/usr/local/bin
+#export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH:/opt/local/bin
+
+#################### PYTHONSTARTUP
+
+export PYTHONSTARTUP=~/.pystartup
+
+#################### PYTHONSTARTUP
+
 
 #export PYTHONPATH=/Library/Python/2.5/site-packages:$PYTHONPATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
-export VIM_HOME="/usr/local/bin"
+#export VIM_HOME="/usr/local/bin"
+export VIM_HOME="~/git/dotfiles/vim"
 export PATH="$VIM_HOME:$PATH"
 export EDITOR="vi"
 
@@ -39,7 +47,7 @@ fi
 export MONGOHQ_URL="mongodb://:@localhost:27017/forex"
 
 export R_HOME='/Library/Frameworks/R.Framework/Resources'
-# export R_HOME='/usr/bin/R'
+#export R_HOME='/usr/bin/Rscript'
 # export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
 
 # from http://kpumuk.info/mac-os-x/customizing-iterm-creating-a-display-profile-with-pastel-colors/
@@ -68,6 +76,10 @@ export C_INCLUDE_PATH=/opt/local/include
 export LIBRARY_PATH=/opt/local/lib
 export LD_LIBRARY_PATH=/opt/local/lib
 
+# color the directories
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+##############################################
 
 #rvm autocomplete
 

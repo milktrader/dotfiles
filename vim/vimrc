@@ -9,9 +9,11 @@ map <Tab> <C-p>
 
 set nocompatible                  " Must come first because it changes other options.
 
-silent! call pathogen#runtime_append_all_bundles()
+"silent! call pathogen#runtime_append_all_bundles()
 
 syntax enable                     " Turn on syntax highlighting.
+set background=dark
+
 filetype plugin indent on         " Turn on file type detection.
 
 filetype plugin on                 " for the R vim add on 
@@ -36,7 +38,7 @@ set ruler                         " Show cursor position.
 
 set incsearch                     " Highlight matches as you type.
 set hlsearch                      " Highlight matches.
-:nnoremap <silent> <C-l> :noh<CR><C-l>
+":nnoremap <silent> <C-l> :noh<CR><C-l>
 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
@@ -56,13 +58,15 @@ set expandtab                    " Use spaces instead of tabs
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
-set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+"set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 colorscheme vividchalk
-" colorscheme topfunky-light
+"colorscheme solarized
+"colorscheme topfunky-light
 "colorscheme railscasts	
+"colorscheme default
 
-let mapleader = ","
+let mapleader=","
 
 " Tab mappings.
 " map <leader>tt :tabnew<cr>
@@ -92,6 +96,19 @@ map <leader>j <c-w>j
 map <leader>k <c-w>k
 map <leader>l <c-w>l
 
+" #################### VIM to ipython via tmux
+" futuredale setup
+
+autocmd FileType python map <buffer> <leader>i :w<CR>:!tmux send-keys -t ipython "\%time run  %:p" enter<CR><CR>
+
+" #################### to output to file instead of stdout
+
+:vnoremap map <leader>p :!python<CR>
+
+
+" #################### to output to file instead of stdout
+
+
 " map buffer switching
 
 " map <F8>  : b#
@@ -102,20 +119,53 @@ map <leader>l <c-w>l
 
 imap qq <C-p>
 
+" ######################## open shell in new buffer 
+
+command! -complete=shellcmd -nargs=+ Shell call s:RunShellCommand(<q-args>)
+function! s:RunShellCommand(cmdline)
+    echo a:cmdline
+      let expanded_cmdline = a:cmdline
+        for part in split(a:cmdline, ' ')
+          if part[0] =~ '\v[%#<]'
+          let expanded_part = fnameescape(expand(part))
+          let expanded_cmdline = substitute(expanded_cmdline, part, expanded_part, '')
+          endif
+        endfor
+      botright new
+      setlocal buftype=nofile bufhidden=wipe nobuflisted noswapfile nowrap
+      call setline(1, 'You entered:    ' . a:cmdline)
+      call setline(2, 'Expanded Form:  ' .expanded_cmdline)
+      call setline(3,substitute(getline(2),'.','=','g'))
+      execute '$read !'. expanded_cmdline
+      setlocal nomodifiable
+      1
+endfunction
+
+command! -complete=file -nargs=* Make call s:RunShellCommand('make '.<q-args>)
+command! -complete=file -nargs=* Git call s:RunShellCommand('git '.<q-args>)
+
+"noremap <leader>m :silent! :make \| :redraw! \| :botright :cw<cr>
+
+
+
+
+
 
 " some mapping for make I found on internet
-map <F3> : call CompileGcc()<CR>
-func! CompileGcc()
-  exec "w"
-    exec "!gcc % -o %<"
-    endfunc
+"map <F3> : call CompileGcc()<CR>
+"func! CompileGcc()
+"  exec "w"
+"    exec "!gcc % -o %<"
+"    endfunc
+"
+"map <F4> :call CompileRunGcc()<CR>
+"    func! CompileRunGcc()
+"      exec "w"
+"        exec "!gcc % -o %<"
+"	  exec "! ./%<"
+"  endfunc
+"
 
-map <F4> :call CompileRunGcc()<CR>
-    func! CompileRunGcc()
-      exec "w"
-        exec "!gcc % -o %<"
-	  exec "! ./%<"
-  endfunc
+" open file from where last edited (GB screencast)
 
-
-
+:au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif 
