@@ -4,6 +4,13 @@
 # /Users/wlasiuk/.rvm/rubies/ruby-1.9.2-p0/bin:/Users/wlasiuk/.rvm/bin:
 # /Users/wlasiuk/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:
 # /usr/texbin:/usr/X11/bin
+
+################### GNUPLOT
+
+export GNUTERM='x11'
+################### GNUPLOT
+
+
 export CPPFLAGS=-I/opt/X11/include
 
 
@@ -17,6 +24,12 @@ export PATH=~/bin:$PATH:/opt/local/bin
 export PYTHONSTARTUP=~/.pystartup
 
 #################### PYTHONSTARTUP
+#################### JULIA  
+
+export PATH="$HOME/git/julia:$PATH"
+
+#################### JULIA  
+
 
 
 #export PYTHONPATH=/Library/Python/2.5/site-packages:$PYTHONPATH
