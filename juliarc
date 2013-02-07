@@ -1,2 +1,1 @@
-
-ENV["JULIA_ANSWER_COLOR"] = "green"
+ENV["JULIA_ANSWER_COLOR"] = "blue"
