@@ -12,6 +12,7 @@ alias ggg='git push && git push heroku master'
 alias clone='git clone git://github.com/'
 alias gst="git status"
 alias ga="git add ."
+alias glog="git log --pretty=oneline"
 alias gpu="git push"
 alias gpl="git pull"
 alias gb="git branch"
@@ -26,11 +27,13 @@ alias down="cd Download"
 alias desk="cd Desktop"
 
 # misc
+
 alias vi="vim"
 alias c="clear"
 alias la="ls -a"
 alias hal="ls -hal"
 alias sr="screen -r"
+alias safari="open -a Safari"
 
 # rails & ruby & mysql
 
@@ -46,11 +49,7 @@ alias tm="top -o vsize"  # memory
 
 alias g="mvim --remote-silent"
 
-
-
-
 ############ colours ###################
-
 
 ## Reset
 Color_Off='\e[0m'       # Text Reset
