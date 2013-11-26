@@ -21,7 +21,8 @@ alias gd="git diff | mate"
 # change directory
 
 alias ..="cd .."
-
+alias hack="cd ~/hack"
+alias pkg="cd ~/.julia"
 alias box="cd Dropbox"
 alias down="cd Download"
 alias desk="cd Desktop"
@@ -29,6 +30,7 @@ alias desk="cd Desktop"
 # misc
 
 alias vi="vim"
+alias j="julia"
 alias c="clear"
 alias la="ls -a"
 alias hal="ls -hal"

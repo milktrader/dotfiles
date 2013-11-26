@@ -6,31 +6,25 @@
 # /usr/texbin:/usr/X11/bin
 
 ################### GNUPLOT
-
-export GNUTERM='x11'
+#export GNUTERM='x11'
 ################### GNUPLOT
-
 
 export CPPFLAGS=-I/opt/X11/include
 
-
 source ~/git/dotfiles/git/git-completion.bash
-export PATH=/usr/local/share/python:$PATH
+# export PATH=/usr/local/share/python:$PATH
 #export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH:/opt/local/bin
 
 #################### PYTHONSTARTUP
-
 export PYTHONSTARTUP=~/.pystartup
-
 #################### PYTHONSTARTUP
-#################### JULIA  
 
+#################### JULIA  
 export PATH="$HOME/git/julia:$PATH"
-
+#export LD_LIBRARY_PATH="/Applications/Julia.app/Contents/Resources/julia/lib/"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Applications/Julia.app/Contents/Resources/julia/lib/
 #################### JULIA  
-
-
 
 #export PYTHONPATH=/Library/Python/2.5/site-packages:$PYTHONPATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -55,11 +49,11 @@ fi
 #export VIRTUALENVWRAPPER_LOG_DIR
 #VIRTUALENVWRAPPER_LOG_DIR=/tmp
 
-
 ### MONGO URL ###################################
 export MONGOHQ_URL="mongodb://:@localhost:27017/forex"
+export R_HOME="/Library/Frameworks/R.Framework/Resources"
+### MONGO URL ###################################
 
-export R_HOME='/Library/Frameworks/R.Framework/Resources'
 #export R_HOME='/usr/bin/Rscript'
 # export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
 
@@ -74,12 +68,9 @@ set convert-meta off
 PERL_CPANM_OPT="--local-lib=~/perl5"
 
 # # RSRuby
-# 
-# #export tLD_LIBRARY_PATH=$LD_LIBRARY_PATH:RHOME/bin
-# 
+# #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:RHOME/bin
 #export R_HOME="/Library/Frameworks/R.Framework/Resources"
 #export LD_LIBRARY_PATH=$R_HOME/lib
-# 
 # export R_HOME="/Library/Frameworks/R.Framework/Resources"
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:R_HOME/lib:/opt/local/lib
 # some LIBRARY_PATH LD_LIBRARY_PATH variables
