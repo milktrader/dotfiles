@@ -1,1 +1,16 @@
 ENV["JULIA_ANSWER_COLOR"] = "blue"
+
+##======================== iTerm Gadfly display from loladiro
+
+import Base: display
+function display(d::Base.REPL.REPLDisplay, m::MIME"image/png", x)
+    b = base64(writemime,m,x)
+    write(Base.REPL.outstream(d.repl),"\e]1337;File=inline=1:",b,"\a")
+end
+display(d::Base.REPL.REPLDisplay, x::Gadfly.Plot) = display(d,MIME"image/png"(),x)
+plot(args...; kwargs...) = Gadfly.plot(args..., Gadfly.Theme(
+panel_fill=color("black"), default_color=color("orange"), major_label_color=color("white"), minor_label_color=color("white")
+); kwargs...)
+
+##=======================================================
+
