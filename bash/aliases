@@ -19,7 +19,7 @@ alias gcm="git checkout master"
 
 alias ..="cd .."
 alias hack="cd ~/hack"
-alias pkg="cd ~/.julia"
+alias pkg="cd ~/.julia/v0.3"
 alias box="cd Dropbox"
 alias down="cd Download"
 alias desk="cd Desktop"
