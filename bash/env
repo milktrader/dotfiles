@@ -13,18 +13,42 @@ export CPPFLAGS=-I/opt/X11/include
 
 source ~/git/dotfiles/git/git-completion.bash
 # export PATH=/usr/local/share/python:$PATH
-#export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH:/opt/local/bin
 
 #################### PYTHONSTARTUP
 export PYTHONSTARTUP=~/.pystartup
 #################### PYTHONSTARTUP
 
+###################################### pantry bash
+export PATH="$HOME/.pantry:$PATH"
+###################################### pantry bash
+
+###################################### R
+
+export R_HOME="/Library/Frameworks/R.Framework/Resources"
+export PATH="~/.R/R-3.2.2/bin/:$PATH"
+
+#export R_HOME='/usr/bin/Rscript'
+# export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
+
+##################################### R
+
 #################### JULIA  
-export PATH="$HOME/git/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.3.11/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.4rc1/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.4rc4/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.4.0/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.4.1/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.5rc3/julia:$PATH"
+
 #export LD_LIBRARY_PATH="/Applications/Julia.app/Contents/Resources/julia/lib/"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Applications/Julia.app/Contents/Resources/julia/lib/
 #################### JULIA  
+
+#################### JUJU  
+export PATH="$HOME/git/juliajulia/bin:$PATH"
+#################### JUJU  
 
 #export PYTHONPATH=/Library/Python/2.5/site-packages:$PYTHONPATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
@@ -51,11 +75,7 @@ fi
 
 ### MONGO URL ###################################
 export MONGOHQ_URL="mongodb://:@localhost:27017/forex"
-export R_HOME="/Library/Frameworks/R.Framework/Resources"
-### MONGO URL ###################################
 
-#export R_HOME='/usr/bin/Rscript'
-# export R_HOME_DIR='/Library/Frameworks/R.framework/Resources'
 
 # from http://kpumuk.info/mac-os-x/customizing-iterm-creating-a-display-profile-with-pastel-colors/
 #export LANG=ru_RU.UTF-8
