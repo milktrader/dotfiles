@@ -42,6 +42,8 @@ export PATH="$HOME/.pantry/julia-0.4.0/julia:$PATH"
 export PATH="$HOME/.pantry/julia-0.4.1/julia:$PATH"
 export PATH="$HOME/.pantry/julia-0.5rc3/julia:$PATH"
 export PATH="$HOME/.pantry/julia-0.5.0/julia:$PATH"
+export PATH="$HOME/.pantry/julia-0.6/julia:$PATH"
+export PATH="/Applications/Julia-0.6.app/Contents/Resources/julia/bin:$PATH"
 
 #export LD_LIBRARY_PATH="/Applications/Julia.app/Contents/Resources/julia/lib/"
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Applications/Julia.app/Contents/Resources/julia/lib/

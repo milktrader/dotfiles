@@ -1,3 +1,8 @@
+"TODO make this go to dot files, not sure why it's not doing it now
+"
+"
+" vim configs
+execute pathogen#infect()
 " Example Vim configuration.
 " Copy or symlink to ~/.vimrc or ~/_vimrc.
 " to get pink.vim to work
