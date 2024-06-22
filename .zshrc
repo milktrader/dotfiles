@@ -26,8 +26,6 @@ function gg(){
 	git commit -v -a -m "$*"
 }
 
-# # Git tab completion
-# source ~/git-completion.bash
+# ssh
 
-
-#[ -f "/Users/milktrader/.ghcup/env" ] && . "/Users/milktrader/.ghcup/env" # ghcup-env
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
