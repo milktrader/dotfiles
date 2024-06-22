@@ -1,4 +1,0 @@
-.First <- function()
- { 
-  cat("hello from config \n")
-}

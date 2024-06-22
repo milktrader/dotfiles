@@ -1,3 +1,0 @@
-ENV["JULIA_ANSWER_COLOR"] = "blue"
-
-#using TerminalExtensions 

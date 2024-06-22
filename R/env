@@ -1,3 +1,0 @@
-
-#export R_HOME="/Library/Frameworks/R.Framework/Resources"
-export LD_LIBRARY_PATH=$R_HOME/lib
