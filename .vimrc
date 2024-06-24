@@ -1,0 +1,3 @@
+set nu
+
+colorscheme slate

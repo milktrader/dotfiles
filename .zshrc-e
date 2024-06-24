@@ -30,5 +30,3 @@ function gg(){
 # ssh
 
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
-
-[ -f "/Users/milktrader/.ghcup/env" ] && . "/Users/milktrader/.ghcup/env" # ghcup-env
